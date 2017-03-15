@@ -37,3 +37,5 @@ fun main(args: Array<String>) {
             .map { it!!.toUpperCase() }
             .forEach(::println)
 }
+
+//exercise 2
