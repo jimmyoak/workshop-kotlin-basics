@@ -38,3 +38,5 @@ fun main(args: Array<String>) {
         println(i)
     }
 }
+
+// exercise 1
