@@ -7,6 +7,4 @@ fun fizzbuzz(number: Int) = when {
     else -> "$number"
 }
 
-fun main(args: Array<String>) {
-    (0..100).map(::fizzbuzz).forEach(::println)
-}
+fun main(args: Array<String>) = (0..100).map(::fizzbuzz).forEach(::println)
