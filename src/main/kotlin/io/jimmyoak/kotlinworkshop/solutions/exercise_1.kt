@@ -1,6 +1,6 @@
 package io.jimmyoak.kotlinworkshop.solutions
 
-fun fizzbuzz(number: Int): String = when {
+fun fizzbuzz(number: Int) = when {
     number % 15 == 0 -> "FizzBuzz"
     number % 3 == 0 -> "Fizz"
     number % 5 == 0 -> "Buzz"
