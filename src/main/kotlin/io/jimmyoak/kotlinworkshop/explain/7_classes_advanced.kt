@@ -33,6 +33,8 @@ class Doge : Dog() {
     override fun talk() = "Wow!"
 }
 
+data class Table(val width: Int, val height: Int)
+
 fun main(args: Array<String>) {
     val animals: List<Animal> = listOf(
             Animal.create("Cat"),
@@ -41,4 +43,7 @@ fun main(args: Array<String>) {
     )
 
     animals.map(Animal::talk).forEach(::println)
+
+    val (width, height) = Table(3, 4)
+    println("${width}x$height")
 }

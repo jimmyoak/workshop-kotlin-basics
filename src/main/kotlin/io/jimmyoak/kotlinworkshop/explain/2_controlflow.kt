@@ -33,4 +33,8 @@ fun main(args: Array<String>) {
         is Number -> println("It was a number")
         else -> println("No fucking idea what it was")
     }
+
+    for (i in 1 until 11) {
+        println(i)
+    }
 }
