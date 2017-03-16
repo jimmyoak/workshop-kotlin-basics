@@ -47,3 +47,5 @@ fun main(args: Array<String>) {
     val (width, height) = Table(3, 4)
     println("${width}x$height")
 }
+
+// exercise 4

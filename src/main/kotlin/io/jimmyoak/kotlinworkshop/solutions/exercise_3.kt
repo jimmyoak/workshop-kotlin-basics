@@ -23,7 +23,7 @@ class Order {
     fun total() = lines.map(OrderLine::total).sum()
 }
 
-data class OrderLine(val product: String, val quantity: Int, val price: Double) {
+class OrderLine(val product: String, val quantity: Int, val price: Double) {
     fun total() = quantity * price
 }
 
