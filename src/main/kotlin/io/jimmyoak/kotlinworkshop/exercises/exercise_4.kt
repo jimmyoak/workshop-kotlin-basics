@@ -20,7 +20,7 @@ Create a disco which only opens on weekends, and check if it's open on:
     - 08/04/2017, 09/04/2017 -> OPEN
     - 13/03/2017, 14/03/2017, 29/03/2017, 07/04/2017 -> CLOSE
 
-Create an end of the year disco which only opens 31/12 - 01/01, and check if it's open on:
-    - 31/12/2019, 01/01/2018 -> OPEN
-    - 08/04/2017, 09/04/2017 -> CLOSE
+Create a DDD Europe Conference which only opens 02/02/2017 - 05/02/2017, and check if it's open on:
+    - 02/02/2017, 03/02/2017, 05/02/2017 -> OPEN
+    - 08/04/2017, 02/04/2018 -> CLOSE
 */
