@@ -9,6 +9,10 @@ fun printNumbers(initialNumber: Int, endNumber: Int){
     for (i in initialNumber until endNumber) {
         println(i)
         when (i) {
+            isDivisible(3) -> println("Fizz")
+        }
+
+        /*when (i) {
             2 -> println("Fizz")
             4 -> {
                 println("Buzz")
@@ -23,8 +27,12 @@ fun printNumbers(initialNumber: Int, endNumber: Int){
             17 -> println("Fizz")
             19 -> println("Buzz")
             else -> ""
-        }
+        }*/
     }
+}
+
+fun isDivisible(number: Int): Boolean{
+    return true;
 }
 
 /*
