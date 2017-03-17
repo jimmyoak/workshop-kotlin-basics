@@ -32,10 +32,12 @@ Buzz
 */
 
 fun main(args: Array<String>) {
-    fizzBuzz(20)
+    fizzBuzz(100)
 }
 
 fun fizzBuzz(number: Int) {
+    fun divisibleBy(number: Int, factor: Int) = number % factor == 0
+
     for (i in 1..number) {
         when {
             divisibleBy(i, 3) && divisibleBy(i, 5) -> println("FizzBuzz")
@@ -46,4 +48,3 @@ fun fizzBuzz(number: Int) {
     }
 }
 
-private fun divisibleBy(number: Int, factor: Int) = number % factor == 0
