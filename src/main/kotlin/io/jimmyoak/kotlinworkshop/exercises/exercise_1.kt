@@ -40,11 +40,12 @@ fun fizzBuzz(number: Int) {
 
     for (i in 1..number) {
         when {
-            divisibleBy(i, 3) && divisibleBy(i, 5) -> println("FizzBuzz")
+            divisibleBy(i, 15) -> println("FizzBuzz")
             divisibleBy(i, 3) -> println("Fizz")
             divisibleBy(i, 5) -> println("Buzz")
             else -> println(i)
         }
     }
 }
+
 
