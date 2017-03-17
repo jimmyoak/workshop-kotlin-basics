@@ -13,13 +13,19 @@ Write a program which fins prime numbers between 0 and 50 and sums them
 fun data() = listOf(106, 105, 109, 109, 121)
 
 fun main(args: Array<String>) {
-    val numericos: List<Int> = data();
+    /*val numeros: List<Int> = data();
 
-    numericos
+    numeros
             .map { it .toChar()}
-            .forEach(::println)
+            .forEach(::println)*/
+
+   println((1..50)
+            .filter(::isPrime).sum())
 }
 
+fun isPrime(number: Int) = (2 until number)
+        .filter { number % it == 0 }
+        .isEmpty()
 
 
 //fun data2() = "WVZZL"
