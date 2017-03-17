@@ -1,5 +1,32 @@
 package io.jimmyoak.kotlinworkshop.exercises
 
+
+fun main(vararg args: String) {
+   printNumbers(1, 101)
+}
+
+fun printNumbers(initialNumber: Int, endNumber: Int){
+    for (i in initialNumber until endNumber) {
+        println(i)
+        when (i) {
+            2 -> println("Fizz")
+            4 -> {
+                println("Buzz")
+                println("Fizz")
+            }
+            8 -> {
+                println("Fizz")
+                println("Buzz")
+            }
+            11 -> println("Fizz")
+            14 -> println("FizzBuzz")
+            17 -> println("Fizz")
+            19 -> println("Buzz")
+            else -> ""
+        }
+    }
+}
+
 /*
 
 Write a program which prints numbers from 1 to 100, but applying next rules:
