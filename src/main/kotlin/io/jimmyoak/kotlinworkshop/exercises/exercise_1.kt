@@ -1,5 +1,28 @@
 package io.jimmyoak.kotlinworkshop.exercises
 
+
+fun main(args: Array<String>) {
+
+    fun fizzBuzz(x: Int): Any {
+        if (x % 3 == 0) {
+            return "Fizz"
+        }
+        if ( x % 5 == 0 ) {
+            return "Buzz"
+        }
+        if (x % 3 == 0 && x % 5 == 0) {
+            return "FizzBuzz"
+        }
+        return x
+    }
+
+    for (i in 1..100) println(fizzBuzz(i))
+
+
+}
+
+
+
 /*
 
 Write a program which prints numbers from 1 to 100, but applying next rules:
