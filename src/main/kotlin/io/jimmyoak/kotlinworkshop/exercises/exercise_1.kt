@@ -32,9 +32,7 @@ Buzz
 */
 
 fun main(args: Array<String>) {
-    for (i in 1..100) {
-        println(fizzBuzz(i))
-    }
+    (1..100).map(::fizzBuzz).forEach(::println)
 }
 
 fun fizzBuzz(number: Int): String {
@@ -46,4 +44,3 @@ fun fizzBuzz(number: Int): String {
         else -> "$number"
     }
 }
-
