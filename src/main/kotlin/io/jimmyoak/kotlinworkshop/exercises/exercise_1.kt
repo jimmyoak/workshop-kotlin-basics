@@ -8,8 +8,10 @@ fun main(vararg args: String) {
 fun printNumbers(initialNumber: Int, endNumber: Int){
     for (i in initialNumber until endNumber) {
         println(i)
-        when (i) {
-            isDivisible(3) -> println("Fizz")
+        when (isDivisible(i)) {
+            3 -> println("Fizz")
+            5 -> println("Fizz")
+            3 -> println("Fizz")
         }
 
         /*when (i) {
@@ -31,8 +33,8 @@ fun printNumbers(initialNumber: Int, endNumber: Int){
     }
 }
 
-fun isDivisible(number: Int): Boolean{
-    return true;
+fun isDivisible(number: Int): Int{
+    return 3;
 }
 
 /*
