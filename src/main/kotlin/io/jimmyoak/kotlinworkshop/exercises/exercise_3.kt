@@ -28,12 +28,12 @@ class Order{
         return total
     }
 }
-class PrinterLine(){
-    fun printLine(orderLine: OrderLine) = "$orderLine.game.name $orderLine.game.price $orderLine.quantity $orderLine.getTotal"
+object PrinterLine{
+    fun printLine(orderLine: OrderLine) = "${orderLine.game.name} ${orderLine.game.price} ${orderLine.quantity} ${orderLine.getTotal()}"
 }
 fun main(args: Array<String>) {
     var order = Order()
-    val printerLine = PrinterLine()
+
     order.addOrderLine(OrderLine(Game("PS4",299.95),1))
     order.addOrderLine(OrderLine(Game("DualShock 4",59.95),2))
     order.addOrderLine(OrderLine(Game("Resident Evil 7",69.95),1))
@@ -41,9 +41,9 @@ fun main(args: Array<String>) {
 
     println(order.getOrderLines()
             .map {
-                printerLine.printLine(it)
+                PrinterLine.printLine(it)
             }
-            .joinToString(" "))
+            .joinToString("\n"))
 
 
 }
