@@ -14,7 +14,7 @@ Print lines and total
 */
 
 fun main(args: Array<String>) {
-    val order = Order(vat=0.21)
+    val order = Order()
     val orderLines = listOf(
             OrderLine(productName = "PS4", quantity = 1, price = 299.95),
             OrderLine(productName="DualShock 4", quantity = 2, price = 59.95),
@@ -31,9 +31,9 @@ class OrderLine(val productName: String, val quantity: Int, val price: Double) {
     fun total() = price * quantity
 }
 
-class Order(val vat: Double, val orderLines: MutableList<OrderLine> = mutableListOf()) {
+class Order(val orderLines: MutableList<OrderLine> = mutableListOf()) {
 
-    fun total() = orderLines.map {it.total()}.sum() //* (1+vat)
+    fun total() = orderLines.map {it.total()}.sum()
 
     fun addOrderLine(orderLine: OrderLine): Unit {
         orderLines.add(orderLine)
