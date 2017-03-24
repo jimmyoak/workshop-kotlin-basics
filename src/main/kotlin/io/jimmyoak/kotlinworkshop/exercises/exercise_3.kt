@@ -33,6 +33,7 @@ fun main(args: Array<String>) {
             }
 
     totalVAT = totalOrdersPrice * vat
-    println("Total: " + (totalOrdersPrice - totalVAT))
+    println("Total without VAT: " + (totalOrdersPrice))
+    println("Total with VAT: " + (totalOrdersPrice - totalVAT))
 
 }
