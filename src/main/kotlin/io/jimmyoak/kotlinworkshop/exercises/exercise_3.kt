@@ -1,5 +1,7 @@
 package io.jimmyoak.kotlinworkshop.exercises
 
+import com.sun.org.apache.xpath.internal.operations.Or
+
 /*
 Make a class Order
 Order has order lines
@@ -14,19 +16,27 @@ Print lines and total
 
 class OrderLine(var productName: String, var quantity: Int, var price: Double)
 
+class Orders{
+    val orderList: MutableList<OrderLine> = null!!
+
+    fun addOrderLine(order: OrderLine) {
+        orderList.add(order)
+    }
+}
+
 fun main(args: Array<String>) {
     var vat: Double = 0.21
     var totalOrdersPrice: Double = 0.00
     var totalVAT: Double
 
-    var orderPS4: OrderLine = OrderLine("PS4", 1, 299.95)
-    var orderResident: OrderLine = OrderLine("Resident Evil", 1, 69.95)
-    var orderDualShock: OrderLine = OrderLine("DualShock 4", 2, 59.95)
-    var orderVR: OrderLine = OrderLine("VR", 1, 399.95)
+    var myOrders: Orders = Orders()
+    myOrders.addOrderLine(OrderLine("PS4", 1, 299.95))
+    myOrders.addOrderLine(OrderLine("Resident Evil", 1, 69.95))
+    myOrders.addOrderLine(OrderLine("DualShock 4", 2, 59.95))
+    myOrders.addOrderLine(OrderLine("VR", 1, 399.95))
 
-    val orders: List<OrderLine> = listOf(orderPS4, orderDualShock, orderResident, orderVR)
 
-    orders
+    myOrders.orderList
         .forEach{
             totalOrdersPrice += it.price * it.quantity
             println(it.productName + " - " + it.price)
