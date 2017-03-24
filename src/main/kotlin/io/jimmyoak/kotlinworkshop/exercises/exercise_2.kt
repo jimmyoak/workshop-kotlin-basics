@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
 
 
     (1..50)
-            .filter(::isPrime)
+            .filter(::isPrimeJimmy)
             .forEach(::println)
 
     val sum = (1..50)
@@ -37,4 +37,6 @@ fun isPrime(number: Int): Boolean {
             .filter { number % it == 0 }
             .count() <= 1
 }
+
+fun isPrimeJimmy(number: Int): Boolean = (2 until number).filter { number % it == 0 }.isEmpty()
 
