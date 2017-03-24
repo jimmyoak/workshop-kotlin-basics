@@ -22,11 +22,10 @@ fun main(args: Array<String>) {
 
     var orderPS4: Order = Order("PS4", 1, 299.95)
     var orderResident: Order = Order("Resident Evil", 1, 69.95)
-    var dualShock: Order = Order("DualShock 4", 2, 59.95)
+    var orderDualShock: Order = Order("DualShock 4", 2, 59.95)
     var orderVR: Order = Order("VR", 1, 399.95)
 
-
-    val orders: List<Order> = listOf(orderPS4, dualShock, orderResident, orderVR)
+    val orders: List<Order> = listOf(orderPS4, orderDualShock, orderResident, orderVR)
 
     orders
             .forEach{
@@ -36,6 +35,5 @@ fun main(args: Array<String>) {
 
     totalOrdersPriceVat = totalOrdersPrice * vat
     println("Total: " + (totalOrdersPrice - totalOrdersPriceVat))
-
 
 }
