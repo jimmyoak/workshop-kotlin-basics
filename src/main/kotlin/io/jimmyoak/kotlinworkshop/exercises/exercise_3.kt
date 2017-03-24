@@ -23,7 +23,7 @@ fun main(args: Array<String>) {
     )
     orderLines.forEach { order.addOrderLine(it) }
 
-    order.orderLines.forEach { println("Order line: ${it.productName} (${it.total()}€)") }
+    order.lines().forEach { println("Order line: ${it.productName} (${it.total()}€)") }
     println("Total: ${order.total()}€")
 }
 
@@ -31,11 +31,14 @@ class OrderLine(val productName: String, val quantity: Int, val price: Double) {
     fun total() = price * quantity
 }
 
-class Order(val orderLines: MutableList<OrderLine> = mutableListOf()) {
+class Order() {
+    private val orderLines: MutableList<OrderLine> = mutableListOf()
 
     fun total() = orderLines.map {it.total()}.sum()
 
     fun addOrderLine(orderLine: OrderLine): Unit {
         orderLines.add(orderLine)
     }
+
+    fun lines(): List<OrderLine> = orderLines
 }
