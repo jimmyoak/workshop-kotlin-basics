@@ -20,7 +20,7 @@ class Order (var orderLines: MutableList<OrderLine>) {
         var amount: Double = 0.0
         orderLines.forEach { line ->
             run {
-                amount += line.quantity * line.total
+                amount += line.calculatePrice()
             }
         }
         return amount * VAT
@@ -28,7 +28,12 @@ class Order (var orderLines: MutableList<OrderLine>) {
 
 }
 
-class OrderLine(val name: String, val quantity: Int, val total: Double)
+class OrderLine(val name: String, val quantity: Int, val total: Double) {
+
+    fun calculatePrice(): Double {
+        return quantity * total
+    }
+}
 
 class OrderPrinter(val orderLines: MutableList<OrderLine>, val amount: Double ) {
 
