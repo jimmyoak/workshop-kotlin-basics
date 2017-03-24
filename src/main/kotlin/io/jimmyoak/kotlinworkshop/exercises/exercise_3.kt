@@ -27,10 +27,10 @@ fun main(args: Array<String>) {
     val orders: List<OrderLine> = listOf(orderPS4, orderDualShock, orderResident, orderVR)
 
     orders
-            .forEach{
-                totalOrdersPrice += it.price * it.quantity
-                println(it.productName + " - " + it.price)
-            }
+        .forEach{
+            totalOrdersPrice += it.price * it.quantity
+            println(it.productName + " - " + it.price)
+        }
 
     totalVAT = totalOrdersPrice * vat
     println("Total without VAT: " + (totalOrdersPrice))
