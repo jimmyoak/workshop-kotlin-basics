@@ -16,8 +16,8 @@ class OrderLine(var productName: String, var quantity: Int, var price: Double)
 
 fun main(args: Array<String>) {
     var vat: Double = 0.21
-    var totalOrdersPrice: Double = 0.00;
-    var totalVAT: Double = 0.00;
+    var totalOrdersPrice: Double = 0.00
+    var totalVAT: Double
 
     var orderPS4: OrderLine = OrderLine("PS4", 1, 299.95)
     var orderResident: OrderLine = OrderLine("Resident Evil", 1, 69.95)
